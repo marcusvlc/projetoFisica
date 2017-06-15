@@ -38,12 +38,19 @@ public class Info extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("Não utilizar para fins comerciais. Não retirar os devidos créditos.");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Informações");
@@ -61,6 +68,12 @@ public class Info extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(110, 10, 331, 57);
 
+        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel9.setText("Não utilizar para fins comerciais. Não alterar os devidos créditos.");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(10, 350, 390, 70);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Programa desenvolvido em Java com intuito de calcular integrais utilizando o método do trapézio. ");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 110, 590, 14);
@@ -73,6 +86,17 @@ public class Info extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(490, 350, 90, 40);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel7.setText("www.github.com/marcusvlc/projetoFisica");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(80, 270, 530, 40);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Código-fonte disponível para fins didáticos:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(30, 220, 600, 40);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Marcus Vinícius, Lívia Cavalcanti, Iann Carvalho, André Matos, Paulo Leitão, Edvaldo Batista");
@@ -146,5 +170,9 @@ public class Info extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
