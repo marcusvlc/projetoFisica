@@ -1,5 +1,6 @@
 package janelas;
 
+import classes.Trapezio;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -22,6 +23,8 @@ public class Menu extends javax.swing.JFrame {
     private static boolean botao1 = false;
     private static boolean botao2 = false;
     private static boolean botao3 = false;
+    Trapezio calculaTrapezio;
+    int trap , a, b;
     
     public Menu() {
         initComponents();
@@ -206,16 +209,20 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String texto1 = jTextField1.getText();
+        String qtdTrapezios = jTextField1.getText();
+        String intervaloA = jTextField3.getText();
+        String intervaloB = jTextField2.getText();
         
         try{
-            int campo1 = Integer.parseInt(texto1);
+             trap = Integer.parseInt(qtdTrapezios);
+             a = Integer.parseInt(intervaloA);
+             b = Integer.parseInt(intervaloB);
         }catch(Exception e) {
-            JOptionPane.showMessageDialog(this, "Algum campo está incorreto, tente novamente!");
+            JOptionPane.showMessageDialog(this, "Os campos devem ser preenchidos com números inteiros!");
         }
         
         if(botao1 == true) {
-         JOptionPane.showMessageDialog(this, "Opcao 1 selecionada");
+            JOptionPane.showMessageDialog(this, "O resultado da integral selecionada é: " + calculaTrapezio.integracaoPorTrapezio(a, b, trap, 0));
 
         }
     }//GEN-LAST:event_jButton2ActionPerformed

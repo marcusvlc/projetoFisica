@@ -79,11 +79,11 @@ public class Info extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(20, 190, 560, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Projeto desenvolvido por:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 140, 490, 40);
+        jLabel4.setBounds(90, 140, 490, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/janelas/imagens/56216_Papel-de-Parede-Fundo-Azul-56216_1920x1200.jpg"))); // NOI18N
         getContentPane().add(jLabel3);
