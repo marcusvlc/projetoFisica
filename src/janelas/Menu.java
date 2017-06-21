@@ -2,6 +2,7 @@ package janelas;
 
 import classes.Trapezio;
 import java.awt.Color;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /*
@@ -23,6 +24,7 @@ public class Menu extends javax.swing.JFrame {
     private static boolean botao1 = false;
     private static boolean botao2 = false;
     private static boolean botao3 = false;
+    private static boolean botao4 = false;
     Trapezio calculaTrapezio;
     int trap , a, b;
     
@@ -32,7 +34,7 @@ public class Menu extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton2);
         buttonGroup1.add(jRadioButton3);
         this.getContentPane().setBackground(Color.BLACK);
-
+        setIcon();
         setSize(610, 450);
 
         
@@ -54,6 +56,7 @@ public class Menu extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -102,27 +105,37 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(380, 210, 103, 57);
+        jRadioButton1.setBounds(270, 220, 103, 57);
 
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jRadioButton2.setText("Integral2");
+        jRadioButton2.setText("∫dθ");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(320, 130, 100, 57);
+        jRadioButton2.setBounds(270, 140, 100, 57);
 
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jRadioButton3.setText("Integral3");
+        jRadioButton3.setText("∫sen x");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(450, 130, 103, 60);
+        jRadioButton3.setBounds(390, 140, 130, 60);
+
+        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jRadioButton5.setText("∫cos x");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButton5);
+        jRadioButton5.setBounds(390, 220, 130, 60);
 
         jButton2.setText("Calcular");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +156,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Selecione uma integral:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(353, 90, 159, 17);
+        jLabel3.setBounds(320, 100, 159, 17);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -190,7 +203,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/janelas/imagens/56216_Papel-de-Parede-Fundo-Azul-56216_1920x1200.jpg"))); // NOI18N
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(-6, -16, 620, 430);
+        jLabel7.setBounds(-6, -16, 650, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -205,7 +218,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         botao1 = true;
-        botao2 = botao3 = false;
+        botao2 = botao3 = botao4 = false;
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -225,16 +238,35 @@ public class Menu extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "O resultado da integral selecionada é: " + calculaTrapezio.integracaoPorTrapezio(a, b, trap, 0));
 
         }
+        if(botao2 == true) {
+            JOptionPane.showMessageDialog(this, "O resultado da integral selecionada é: " + calculaTrapezio.integracaoPorTrapezio(a, b, trap, 1));
+
+        }
+        
+        if(botao3 == true) {
+            JOptionPane.showMessageDialog(this, "O resultado da integral selecionada é: " + Math.toRadians(calculaTrapezio.integracaoPorTrapezio(a, b, trap, 2)));
+
+        }
+        
+        if(botao4 == true) {
+            JOptionPane.showMessageDialog(this, "O resultado da integral selecionada é: " + Math.toRadians(calculaTrapezio.integracaoPorTrapezio(a, b, trap, 3)));
+
+        }
+        
+        if(botao1 == false && botao2 == false && botao3 == false && botao4 == false) {
+            JOptionPane.showMessageDialog(this, "Por favor selecione uma integral para prosseguir!");
+        }
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         botao2 = true;
-        botao1 = botao3 = false;
+        botao1 = botao3 = botao4 = false;
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         botao3 = true;
-        botao2 = botao1 = false;
+        botao2 = botao1 = botao4 = false;
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -249,6 +281,11 @@ public class Menu extends javax.swing.JFrame {
         new Info(this).setVisible(true);
         this.setEnabled(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+        botao4 = true;
+        botao1 = botao2 = botao3 = false;
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,8 +339,13 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
+
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+    }
 }

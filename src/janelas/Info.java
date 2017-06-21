@@ -6,6 +6,7 @@
 package janelas;
 
 import java.awt.Color;
+import java.awt.Toolkit;
 
 /**
  *
@@ -20,6 +21,7 @@ public class Info extends javax.swing.JFrame {
     Menu menu;
     public Info() {
         initComponents();
+        setIcon();
         
         setSize(610, 450);
     }
@@ -39,6 +41,7 @@ public class Info extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -61,6 +64,11 @@ public class Info extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
+        jLabel10.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        jLabel10.setText("<html>Nesse programa foram usadas integrais que remetem a assuntos estudados em sala de aula (1º estágio fundamentos da física clássica). A integral  ∫senx dx remete justamente ao cálculo do campo eletrico numa casca hemisférica carregada uniformemente, já a integral ∫dθ faz referência ao cálculo do campo elétrico produzido por um anel de cargas. <br></html>");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(20, 100, 550, 90);
+
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 51));
@@ -76,7 +84,7 @@ public class Info extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Programa desenvolvido em Java com intuito de calcular integrais utilizando o método do trapézio. ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 110, 590, 14);
+        jLabel2.setBounds(20, 80, 590, 14);
 
         jButton1.setText("Fechar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -90,28 +98,28 @@ public class Info extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel7.setText("www.github.com/marcusvlc/projetoFisica");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(80, 270, 530, 40);
+        jLabel7.setBounds(70, 300, 530, 40);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Código-fonte disponível para fins didáticos:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 220, 600, 40);
+        jLabel6.setBounds(40, 270, 600, 40);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Marcus Vinícius, Lívia Cavalcanti, Iann Carvalho, André Matos, Paulo Leitão, Edvaldo Batista");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(20, 190, 560, 30);
+        jLabel5.setBounds(10, 240, 560, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Projeto desenvolvido por:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(90, 140, 490, 40);
+        jLabel4.setBounds(90, 200, 490, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/janelas/imagens/56216_Papel-de-Parede-Fundo-Azul-56216_1920x1200.jpg"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(-20, -20, 640, 460);
+        jLabel3.setBounds(-20, -20, 710, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -166,6 +174,7 @@ public class Info extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -175,4 +184,8 @@ public class Info extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
+
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+    }
 }
