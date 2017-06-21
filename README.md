@@ -1,1 +1,1 @@
-# projetoFisica
+# Projeto de Física: Integrais númericas (método do trapézio)
