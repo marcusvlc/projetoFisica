@@ -94,7 +94,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(60, 120, 116, 20);
+        jTextField1.setBounds(60, 120, 116, 30);
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -170,7 +170,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(126, 231, 58, 20);
+        jTextField2.setBounds(130, 230, 58, 30);
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +178,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(35, 231, 58, 20);
+        jTextField3.setBounds(35, 231, 58, 30);
 
         jLabel5.setFont(new java.awt.Font("Serif", 3, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
